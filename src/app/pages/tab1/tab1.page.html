@@ -1,12 +1,23 @@
 <ion-header class="ion-no-border">
-    <ion-toolbar>
+    <ion-toolbar color="dark">
         <ion-title>
             Pendientes
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-    <h1>Hola mundo</h1>
+<ion-content color="dark" [fullscreen]="true">
+    <ion-list color="dark">
+        <ion-item detail color="dark" *ngFor="let lista  of deseosServices.listas">
+            <ion-label>
+                {{lista.titulo}}
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="agregarLista()" color="tertiary">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 
 </ion-content>
