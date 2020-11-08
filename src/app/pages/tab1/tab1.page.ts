@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { DeseosService } from '../../services/deseos.service';
-import { AgregarPage } from '../agregar/agregar.page';
 
 @Component({
   selector: 'app-tab1',
@@ -26,6 +25,7 @@ export class Tab1Page {
         {
           name:'titulo',
           type:'text',
+          
           placeholder:'Nombre de la lista'
 
         }
@@ -59,7 +59,8 @@ export class Tab1Page {
 
     alert.present();
     
-    //this.router.navigateByUrl('/tabs/tab1/agregar');
+
   }
+  
 
 }
